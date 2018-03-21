@@ -1,0 +1,14 @@
+entrypoint: bundle exec rackup --port $PORT
+env: flex
+runtime: ruby
+
+env_variables:
+  SECRET_KEY_BASE: bff66e04db39c31f6b729b85ae3dac9974e341e09273b0e8ec5b23d34062c70663c5059a104344446a309ff564e7ed9d92bf4324b866375f91eca6612f6c0dca
+  POSTGRES_USER: postgres
+  POSTGRES_PASSWORD: postgresql
+  POSTGRES_DATABASE: postgres
+  POSTGRES_SOCKET_PATH: /cloudsql/swift-terminal-177706:asia-east1:imagesearchdb
+
+beta_settings:
+  cloud_sql_instances: swift-terminal-177706:asia-east1:imagesearchdb
+
