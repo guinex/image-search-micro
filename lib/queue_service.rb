@@ -1,5 +1,4 @@
-module Service
-  class ClusterQueue < Mirraw::DesignCluster
+class QueueService < DesignCluster
     def send_cluster_data(data)
     end
 
@@ -11,11 +10,5 @@ module Service
   end
 
 
-  class ClusterRelation < ImageSearch::ParentClusterRelation
-    def process(data)
-    end
 
-    def response
-    end
-  end
 end

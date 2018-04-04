@@ -52,19 +52,25 @@ mirraw_production:
 #   prepared_statements: false
 
 
-# image_search_development:
-#   <<: *default
-#   database: mirraw_secondary_development
-#   pool: <%= ENV["DB_POOL"] || ENV['MAX_THREADS'] || 5 %>
-#   username: shailesh
-#   password:
-#   prepared_statements: false
+image_search_development:
+  <<: *default
+  database: mirraw_secondary_development
+  pool: <%= ENV["DB_POOL"] || ENV['MAX_THREADS'] || 5 %>
+  username: shailesh
+  password:
+  prepared_statements: false
 
 production:
   <<: *default
-  pool: 5
-  timeout: 5000
-  username: postgres
-  password: postgresql
-  database: postgres
-  host: /cloudsql/swift-terminal-177706:asia-east1:imagesearch
+  database: mirraw_develop
+  pool: <%= ENV["DB_POOL"] || ENV['MAX_THREADS'] || 5 %>
+  username: shailesh
+  password:
+  prepared_statements: false
+  # <<: *default
+  # pool: 5
+  # timeout: 5000
+  # username: postgres
+  # password: postgresql
+  # database: postgres
+  # host: /cloudsql/swift-terminal-177706:asia-east1:imagesearch
